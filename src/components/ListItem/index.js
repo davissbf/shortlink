@@ -1,10 +1,21 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
+
+import { ContainerButton, Item } from './styles';
+
+import { Feather } from '@expo/vector-icons';
 
 const ListItem = () => {
   return(
     <View>
-      <Text>Seu Link: https://link.com</Text>
+      <ContainerButton activeOpacity={0.7} onPress={() => alert('MODAL')}>
+        <Feather
+          name="link"
+          color="#fff"
+          size={24}
+        />
+        <Item numberOfLines={1}>https://youtube.comyoutube.comyoutube.com</Item>
+      </ContainerButton>
     </View>
   );
 }
